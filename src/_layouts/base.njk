@@ -7,6 +7,15 @@
     <title>{{ title }} | James Midzi</title>
   </head>
   <body>
+  {# {% include "navigation.njk" %} #}
+  <nav> 
+    <a href='/'>Home</a>
+    <a href='/potions'>Potions</a>
+    <a href='/parchment'>Parchment</a>
+  </nav>
+
+  <main>
     {{ content | safe }}
+    </main>
   </body>
 </html>
