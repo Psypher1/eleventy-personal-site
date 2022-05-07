@@ -1,6 +1,6 @@
 ---
 title: Potions Room
-layout: base
+layout: pageLayout
 ---
 
 # James 'Dante' Midzi
