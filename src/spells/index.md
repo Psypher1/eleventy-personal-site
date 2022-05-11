@@ -1,6 +1,6 @@
 ---
 title: Spells
-layout: base
+layout: pageLayout
 ---
 
 # Spells

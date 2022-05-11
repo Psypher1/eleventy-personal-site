@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=J, initial-scale=1.0" />
     <title>{{ title }} | James Midzi</title>
   </head>
-  <body>
-  {# {% include "navigation.njk" %} #}
-  <nav> 
-    <a href='/'>Home</a>
-    <a href='/potions'>Potions</a>
-    <a href='/parchment'>Parchment</a>
-  </nav>
+  <body style="color:green;">
+  {% include "partials/navigation.njk" %}
+ 
 
   <main>
     {{ content | safe }}
     </main>
+
+    
+      {% include "partials/footer.njk" %}
+    
   </body>
 </html>

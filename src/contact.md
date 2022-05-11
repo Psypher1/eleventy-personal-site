@@ -1,6 +1,6 @@
 ---
 title: Contact
-layout: base
+layout: pageLayout
 ---
 
 # Contact

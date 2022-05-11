@@ -1,6 +1,6 @@
 ---
 title: Potions
-layout: base
+layout: pageLayout
 ---
 
 # Potions
