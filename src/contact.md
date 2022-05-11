@@ -3,4 +3,4 @@ title: Contact
 layout: pageLayout
 ---
 
-# Contact
+# {{title}}

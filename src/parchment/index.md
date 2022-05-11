@@ -1,6 +1,6 @@
 ---
 title: Parchment
-layout: base
+layout: pageLayout
 ---
 
 # Parchment

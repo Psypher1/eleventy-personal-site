@@ -3,4 +3,4 @@ title: Spells
 layout: pageLayout
 ---
 
-# Spells
+# {{title}}

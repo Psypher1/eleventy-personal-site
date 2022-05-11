@@ -1,4 +1,13 @@
 body {
   font-family: sans-serif;
   color: green;
+  max-width: 32rem;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
