@@ -1,5 +1,6 @@
 module.exports = function(config) {
-  config.addPassthroughCopy("src/assets/css/**/*");
+  // config.addPassthroughCopy("src/assets/css/**/*");
+  config.addPassthroughCopy("src/assets/css/index.css");
 
   return {
     dir: {
@@ -11,6 +12,6 @@ module.exports = function(config) {
   };
 };
 
-  // config.addPlugin(pluginTailwind, {
-  //   src: 'src/assets/css/*'
-  // });
+// config.addPlugin(pluginTailwind, {
+//   src: 'src/assets/css/*'
+// });
