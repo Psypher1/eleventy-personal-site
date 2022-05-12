@@ -12,22 +12,22 @@
     <meta name="viewport" content="width=J, initial-scale=1.0" />
 
     {# CSS #}
-    <link rel="stylesheet" href="{{ '/assets/css/index.css' | url }}">
+    {# <link rel="stylesheet" href="{{ '/assets/css/index.css' | url }}"> #}
 
     {# TAILWIND #}
     <link rel="stylesheet" href="{{ '/assets/css/tailwind.css' | url }}">
 
 
   </head>
-  <body>
+  <body class='antialiased bg-emerald-900 text-green-100'>
   {% include "partials/navigation.njk" %}
  
 
-  <main class='text-blue-600'>
+  <main class='mx-auto min-h-screen max-w-2xl bg-green-900 py-10 px-8 sm:py-12 md:pb-20'>
     {{ content | safe }}
   </main>
 
-  <hr/>
+  
     
   {% include "partials/footer.njk" %}
 
