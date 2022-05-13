@@ -1,7 +1,13 @@
- <nav class="p-4 flex items-center justify-center bg-black gap-2"> 
-    <a href='/'>Home</a>
+ {# <nav class="p-4 flex items-center justify-center bg-black gap-2"> 
+    <a href='/'>Manor</a>
     <a href='/potions'>Potions</a>
     <a href='/parchment'>Parchment</a>
     <a href='/spells'>Spells</a>
     <a href='/owl'>Owl</a>
-  </nav>
+  </nav> #}
+
+<nav class="sticky inset-0 flex items-center justify-center bg-black ">
+{%- for item in collections.page -%}
+<a href="{{ item.url }}" class="hover:bg-green-800 px-5 py-3 {% if item.url == page.url%}active{% endif %} ">{{ item.data.title }}</a>
+{%- endfor -%}
+</nav>

@@ -11,6 +11,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=J, initial-scale=1.0" />
 
+    {# FONT #}
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet"> 
+
+{# local font #}
+<link
+          rel="preload"
+          href="{{ '/fonts/Magic_Spell.woff2' }}"
+          as="font"
+          crossOrigin=""
+        />
+
     {# CSS #}
     {# <link rel="stylesheet" href="{{ '/assets/css/index.css' | url }}"> #}
 
@@ -19,7 +32,7 @@
 
 
   </head>
-  <body class='antialiased bg-emerald-900 text-green-100'>
+  <body class='font-body antialiased bg-emerald-900 text-green-100'>
   {% include "partials/navigation.njk" %}
  
 
