@@ -4,12 +4,25 @@ tags: page
 layout: pageLayout
 order: 1
 ---
+{% import  'macros/pageHeading.njk' as heading %}
 
+{{heading.pageHeading("Hi, I am James 'Dante'", "I am a Draziw, Curator and Professor. I believe that knowledge should be hared, and I try to do my part in that regard each day. I am on a journey to become a reknown Potions Master")}}
+<a href='mailto:jamesmidzi@gmail.com' class=' py-3 px-6 hover:bg-gray-900 bg-black rounded hover:text-white '>Email me</a>
 
-<section > 
-<h1 class='mb-2 text-4xl  font-heading sm:text-4xl md:mb-4 md:text-5xl'>Hi, I'm James 'Dante'</h1>
+{% Section content="I am section content"%}
+
+<div class="mt-8 flex items-center gap-4">
+
+{% Links link="twitter.com", name="twitter"%}
+{% Links link="twitter.com", name="twitter"%}
+{% Links link="twitter.com", name="twitter"%}
+</div>
+<section class='mt-16'> 
+<h1 class='mb-2 text-4xl  font-heading sm:text-4xl md:mb-4 md:text-5xl'>Mr Midzi</h1>
 
 <p class='prose text-green-100 prose-base'>I am a Draziw, Curator and Professor. I believe that knowledge should be hared, and I try to do my part in that regard each day. I am on a journey to become a reknown <span class='font-bold'>Potions Master</span>.</p>
+
+<a href='mailto:jamesmidzi@gmail.com' class='block mt-16 hover:text-white uppercase'>Email me</a>
 
 </section>
 {# Привет! я #}
