@@ -1,3 +1,4 @@
+const PageHeading = require("./src/_includes/components/PageHeading.js");
 const Section = require("./src/_includes/components/Section.js");
 const Links = require("./src/_includes/components/Links.js");
 
@@ -19,6 +20,7 @@ module.exports = function(config) {
   });
 
   // component
+  config.addShortcode("PageHeading", PageHeading);
   config.addShortcode("Section", Section);
   config.addShortcode("Links", Links);
 

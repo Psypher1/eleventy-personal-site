@@ -2,6 +2,6 @@
 
 - [x] add tailwind
 - [x] add google font
-- [ ] add macro for page header
-- [ ] add component for page sections
+- [x] add macro for page header
+- [] add component for page sections (issue with this one)
 - [ ] learn to connect external source
