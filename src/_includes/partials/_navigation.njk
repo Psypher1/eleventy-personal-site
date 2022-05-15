@@ -5,9 +5,10 @@
     <a href='/spells'>Spells</a>
     <a href='/owl'>Owl</a>
   </nav> #}
-
-<nav class="sticky inset-0 flex items-center justify-center bg-black ">
+<header class="bg-black">
+<nav class="sticky inset-0 flex items-center justify-center text-sm md:text-base max-w-2xl mx-auto">
 {%- for item in collections.page -%}
 <a href="{{ item.url }}" class="hover:bg-green-800 px-5 py-3 {% if item.url == page.url%}active{% endif %} ">{{ item.data.title }}</a>
 {%- endfor -%}
 </nav>
+</header>
