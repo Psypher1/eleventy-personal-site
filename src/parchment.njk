@@ -7,6 +7,15 @@ order: 3
 
 {% PageHeading heading="Parchment", subheading="My parchment is where I write down the things I am working on. It is where I figure out spells and potions." %}
 
+{% section "Latest Parchments" %}
+    <article class="flex flex-col gap-4">
+ {% for post in collections.posts %}
+ <a href="{{post.url}}">{{ post.data.title }}</a>
+ {% endfor %}
+ </article
+
+{% endsection %}
+
 <section class="mt-16">
     <h2 class="mb-4 font-headingAlt text-2xl font-semibold text-gray-100 md:text-3xl">Latest Parchments</h2>
 </section>
