@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "npm-run-all -p dev:*",
-    "build": "run-s build:11ty build:css",
+    "build": "run-s build:*",
     "dev:11ty": "eleventy --serve",
-    "dev:css": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/tailwind.css --postcss",
+    "dev:css": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/tailwind.css --watch --postcss",
     "build:11ty": "eleventy",
-    "build:css": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/tailwind.css --watch --postcss"
+    "build:css": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/tailwind.css  --postcss"
   },
   "keywords": [],
   "author": "",
