@@ -1,5 +1,3 @@
-# My Site Made With Eleventy
+# My Potions Room
 
-## Todo
-
-- get tmol file for netlify deploy
+This is my portfolio site built with Eleventy. It uses the styling of its Nextjs version.
