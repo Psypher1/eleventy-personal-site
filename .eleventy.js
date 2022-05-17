@@ -1,4 +1,6 @@
 const PageHeading = require("./src/_includes/components/PageHeading.js");
+const PageSection = require("./src/_includes/components/PageSection.js");
+
 const Section = require("./src/_includes/components/Section.js");
 const Links = require("./src/_includes/components/Links.js");
 
@@ -21,8 +23,10 @@ module.exports = function(config) {
 
   // component
   config.addShortcode("PageHeading", PageHeading);
-  config.addShortcode("Section", Section);
-  config.addShortcode("Links", Links);
+  config.addPairedNunjucksShortcode("PageSection", PageSection);
+
+  // config.addShortcode("Section", Section);
+  // config.addShortcode("Links", Links);
 
   // shortcodes
   config.addPairedNunjucksShortcode("section", function(
@@ -32,7 +36,6 @@ module.exports = function(config) {
     return `<section class="mt-16">
     <h2 class="mb-4 font-headingAlt text-2xl font-semibold text-gray-100 md:text-3xl">${sectionHeading}</h2>
     ${content}
-    
     </section>`;
   });
 
@@ -41,8 +44,8 @@ module.exports = function(config) {
       input: "src",
       data: "_data",
       includes: "_includes",
-      layouts: "_layouts",
-    },
+      layouts: "_layouts"
+    }
   };
 };
 
