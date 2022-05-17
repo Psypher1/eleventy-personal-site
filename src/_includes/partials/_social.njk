@@ -1,5 +1,24 @@
-<div class='mt-4 flex items-center gap-4 text-xl'> 
-    <a class="hover:scale-125 transition duration-300" href="https://twitter.com/Psypher1" target="_blank" rel="noopener noreferrer nofollow" aria-label="Twitter Profile Link" ><i class="fa-brands fa-twitter"></i></a>
-    <a class="hover:scale-125 transition duration-300" href="https://github.com/Psypher1/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Github Profile Link"><i class="fa-brands fa-github"></i></a>
-    <a class="hover:scale-125 transition duration-300" href="https://www.linkedin.com/in/jamesmidzi/" target="_blank" rel="noopener noreferrer nofollow" aria-label="LinkedIn Profile Link"><i class="fa-brands fa-linkedin"></i></a>
+{% set socials  = [
+    {
+        label: "Twitter",
+        url: "https://twitter.com/Psypher1",
+        iconClass: "fa-twitter"
+    },
+    {
+        label: "Github",
+        url: "https://github.com/Psypher1",
+        iconClass: "fa-github"
+    },
+    {
+        label: "LinkedIn",
+        url: "https://www.linkedin.com/in/jamesmidzi/",
+        iconClass: "fa-linkedin"
+    }
+    ]
+ %}
+
+<div class='mt-4 flex items-center gap-4 text-xl' aria-label="social links container"> 
+    {% for item in socials %}
+     <a class="hover:scale-125 transition duration-300" href="{{item.url}}" target="_blank" rel="noopener noreferrer nofollow" aria-label="{{item.label}} Profile Link" ><i class="fa-brands {{item.iconClass}}"></i></a>  
+    {% endfor %}
 </div>

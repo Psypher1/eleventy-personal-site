@@ -1,8 +1,9 @@
 {
   "name": "jamesmidzi",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "My own personal website built with Eleventy",
+  "repository": "",
+  "author": "James Midzi <jamesmidzi@gmail.com>",
   "scripts": {
     "start": "npm-run-all -p dev:*",
     "build": "run-s build:*",
@@ -12,7 +13,6 @@
     "build:css": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/tailwind.css  --postcss"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
