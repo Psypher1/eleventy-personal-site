@@ -1,34 +1,29 @@
+// Shortcode Imports
 const PageHeading = require("./src/_includes/components/PageHeading.js");
 const PageSection = require("./src/_includes/components/PageSection.js");
-
-const Section = require("./src/_includes/components/Section.js");
-const Links = require("./src/_includes/components/Links.js");
 
 module.exports = function(config) {
   // config.addPassthroughCopy("src/assets/css/**/*");
   config.addPassthroughCopy("src/assets/css/index.css");
 
-  // images
+  // Image Passthrough
   config.addPassthroughCopy("src/assets/images");
 
-  // fonts pass
+  // Font Passthrough
   config.addPassthroughCopy({ "./src/_fonts": "/fonts" });
 
-  // page ordering
+  // Page Ordering
   config.addCollection("page", function(collections) {
     return collections.getFilteredByTag("page").sort(function(a, b) {
       return a.data.order - b.data.order;
     });
   });
 
-  // component
+  // Component / Shortcodes
   config.addShortcode("PageHeading", PageHeading);
   config.addPairedNunjucksShortcode("PageSection", PageSection);
 
-  // config.addShortcode("Section", Section);
-  // config.addShortcode("Links", Links);
-
-  // shortcodes
+  // shortcode
   config.addPairedNunjucksShortcode("section", function(
     content,
     sectionHeading
