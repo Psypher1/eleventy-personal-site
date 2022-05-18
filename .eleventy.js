@@ -8,6 +8,7 @@ module.exports = function(config) {
 
   // Image Passthrough
   config.addPassthroughCopy("src/assets/images");
+  config.addPassthroughCopy("src/assets/icons");
 
   // Font Passthrough
   config.addPassthroughCopy({ "./src/_fonts": "/fonts" });
