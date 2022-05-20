@@ -6,11 +6,9 @@ module.exports = function(config) {
   // config.addPassthroughCopy("src/assets/css/**/*");
   config.addPassthroughCopy("src/assets/css/index.css");
 
-  // Image Passthrough
+  // Passthroughs
   config.addPassthroughCopy("src/assets/images");
   config.addPassthroughCopy("src/assets/icons");
-
-  // Font Passthrough
   config.addPassthroughCopy({ "./src/_fonts": "/fonts" });
 
   // Page Ordering

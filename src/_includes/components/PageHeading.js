@@ -8,7 +8,7 @@ function PageHeading({ heading, subheading }) {
       ${heading}
     </h1>
 
-    <p class="prose text-green-100 prose-base md:prose-lg">
+    <p class="prose text-green-100 prose-base md:prose-base">
       ${subheading}
     </p>
   `;
