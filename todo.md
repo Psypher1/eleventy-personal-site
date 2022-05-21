@@ -3,6 +3,6 @@
 - [x] add tailwind
 - [x] add google font
 - [x] add macro for page header
-- [] add component for page sections (issue with this one)
-- [ ] learn to connect external source
+- [x] add component for page sections (issue with this one)
+- [ ] learn to connect to external source
 - [] get data
