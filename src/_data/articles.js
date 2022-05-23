@@ -26,7 +26,5 @@ module.exports = async () => {
 
   const articles = await client.request(query);
 
-  console.log(articles);
-
   return articles.user.publication.posts;
 };
