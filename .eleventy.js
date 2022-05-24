@@ -11,6 +11,9 @@ module.exports = function(config) {
   config.addPassthroughCopy("src/assets/icons");
   config.addPassthroughCopy({ "./src/_fonts": "/fonts" });
 
+  // Robot
+  config.addPassthroughCopy({ "./src/assets/robots.txt": "/robots.txt" });
+
   // Page Ordering
   config.addCollection("page", function(collections) {
     return collections.getFilteredByTag("page").sort(function(a, b) {

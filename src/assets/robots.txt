@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mrmidzi.netlify.app
+
+# Sitemaps
+Sitemap: https://mrmidzi.netlify.app/sitemap.xml
