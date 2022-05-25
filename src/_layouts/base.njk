@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>{% if title and title != 'Home' %}{{title}} | {% endif %}{{ config.siteTitle }}</title>
-
+     <link rel="canonical" href="{{ config.url }}{{ page.url }}">
     {# META #}
      <meta name="description" content="{% if description %}{{ description }}{% else %}{{ config.description }}{% endif %}">
     <meta name="keywords" content="{% if keywords %}{{ keywords }}{% else %}{{ config.keywords }}{% endif %}">

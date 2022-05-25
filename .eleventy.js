@@ -1,3 +1,5 @@
+const { DateTime } = require("luxon");
+
 // Shortcode Imports
 const PageHeading = require("./src/_includes/components/PageHeading.js");
 const PageSection = require("./src/_includes/components/PageSection.js");
@@ -11,8 +13,12 @@ module.exports = function(config) {
   config.addPassthroughCopy("src/assets/icons");
   config.addPassthroughCopy({ "./src/_fonts": "/fonts" });
 
-  // Robot
+  // SEO
   config.addPassthroughCopy({ "./src/assets/robots.txt": "/robots.txt" });
+
+  config.addShortcode("currentDate", (date = DateTime.now()) => {
+    return date;
+  });
 
   // Page Ordering
   config.addCollection("page", function(collections) {
