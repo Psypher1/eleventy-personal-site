@@ -1,44 +1,61 @@
 ---
 title: Manor
-navIcon: 'assets/icons/warlock-eye.svg'
-tags: page
 layout: pageLayout
+tags: page
 order: 1
 ---
 
 
-{% PageHeading heading="Hi, I'm James 'Dante'", subheading="I am a Wizard(Developer), Curator(Writer) and Professor(Tutor). I believe that knowledge should be shared, and I try to do my part in that regard each day. I am on a journey to become a reknown <span class='font-bold'>Potions Master</span>" %}
+{% PageHeading heading="Hi, I'm James Dante", subheading="I am a Wizard(Developer), Curator(Writer) and Professor(Tutor). I believe that knowledge should be shared, and I try to do my part in that regard each day. I am on a journey to become a reknown <span class='font-bold'>Potions Master</span>" %}
 
 {% include "partials/_social.njk"%}
 
 {% PageSection "My Pensieve"%}
 <p class="prose text-green-100">To settle my mind, I move my thoughts to my pensieve. Have a look at some of them...</p>
+
 <article class="mt-5">
-    <h3 class="font-headingAlt text-xl md:text-2xl  font-semibold">Latest Parchment</h3>
-   <p class='prose text-green-100 prose-sm md:prose-base line-clamp-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, dicta sunt voluptatum, autem fugit minima ipsam dolorem eum ut tempore vero similique sequi quisquam at eaque totam, ullam facere ex! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem commodi nisi provident ducimus quod velit nostrum ut tempore corporis laudantium?
+    <h3 class="font-headingAlt text-xl md:text-2xl  font-semibold text-gray-100">Latest Parchment</h3>
+   <p class="prose text-green-100  line-clamp-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, dicta sunt voluptatum, autem fugit minima ipsam dolorem eum ut tempore vero similique sequi quisquam at eaque totam, ullam facere ex! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem commodi nisi provident ducimus quod velit nostrum ut tempore corporis laudantium?
 </p>
+
 </article>
 <article class="mt-5">
-<h3 class="font-headingAlt text-xl md:text-2xl font-semibold">A Potion You Should See</h3>
-<p class='prose text-green-100 prose-sm md:prose-base line-clamp-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, dicta sunt voluptatum, autem fugit minima ipsam dolorem eum ut tempore vero similique sequi quisquam at eaque totam, ullam facere ex! Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia autem fugiat vero minima sapiente, nostrum placeat tenetur odit eos?
+<h3 class="font-headingAlt text-xl md:text-2xl font-semibold text-gray-100">A Potion You Should See</h3>
+  <p class="prose text-green-100  line-clamp-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, dicta sunt voluptatum, autem fugit minima ipsam dolorem eum ut tempore vero similique sequi quisquam at eaque totam, ullam facere ex! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem commodi nisi provident ducimus quod velit nostrum ut tempore corporis laudantium?
 </p>
+
 </article>
 {% endPageSection %}
 
 
 {% PageSection "People I've Worked With"%}
- <ul>
-    <li>Tapiwa</li>
-    <li>Kuziwa</li>
-    <li>Medusa</li>
-</ul>
+{# 
+{% for item in testimonials %}
+<blockquote class="p-4 italic border-l-4 bg-neutral-900 text-neutral-100 border-neutral-500 mb-5">
+  <p class="mb-2 prose prose-base  text-neutral-100">"{{item.message}}"</p>
+  <cite> - 
+  <a href="{{item.link}}" target="_blank" rel="noopener noreferrer">{{item.name}}</a>
+  </cite>
+  </blockquote>
+{% endfor %} #}
+
 {% endPageSection%}
 
+
+
+{# 
+{% PageSection "People I've Worked With"%}
+<blockquote class="p-4 italic border-l-4 bg-neutral-900 text-neutral-100 border-neutral-500 quote">
+   <p class="mb-2 prose text-neutral-100">"Dante goes above and beyond expectations each time. He will call you to verify things or run ideas past you. And he will make sure everything runs as efficiently as possible. He NEVER forgets a discussion, which is great because nothing falls through the cracks. Highly recommend."</p>
+    <cite> - 
+        <a href="https://twitter.com/tapiwanashe36" target="_blank" rel="noopener noreferrer">Tapiwanashe</a>
+    </cite>
+</blockquote>
+
+{% endPageSection %} #}
+
     
-{% PageSection "Marauder's Map"%}
-<img src="{{ '/assets/icons/cauldron.svg'}}" width="20px" height="20px" class="cursor-pointer hover:scale-125"/>
-{# <img src="/assets/icons/cauldron.svg" /> #}
-{% endPageSection%}
+
 
 
 
