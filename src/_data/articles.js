@@ -1,9 +1,11 @@
 require("dotenv").config();
 
+const endpoint = `https://api.hashnode.com/`;
+
 module.exports = async () => {
   const { GraphQLClient, gql } = require("graphql-request");
 
-  const client = new GraphQLClient(process.env.HASHNODE_ENDPOINT);
+  const client = new GraphQLClient(endpoint);
 
   const query = gql`
     {
