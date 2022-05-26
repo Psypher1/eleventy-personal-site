@@ -11,10 +11,13 @@ order: 3
 {% for article in articles %}
 <a href="https://dantedecodes.hashnode.dev/{{article.slug}}"
 target="_blank"  rel="noopener noreferrer"
-class="mb-4 bg-black p-4 block rounded"
+class="mb-6 text-gray-300 bg-gray-900 p-4 block rounded"
 >
-<h3 class="text-2xl font-headingAlt text-white">{{article.title}}</h3>
-<p class="prose text-gray-100 line-clamp-3">{{article.brief}}</p>
+<h3 class="text-xl md:text-2xl font-headingAlt text-gray-200">{{article.title}}</h3>
+{# <img src="{{article.coverImage}}" alt="{{article.title}}" class="object-cover"> #}
+<p class="prose text-gray-300 prose-sm md:prose-base line-clamp-3">{{article.brief}}</p>
+
+
 </a>
    
 {% endfor %}
