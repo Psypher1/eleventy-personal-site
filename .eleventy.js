@@ -20,6 +20,12 @@ module.exports = function(config) {
     return date;
   });
 
+  config.addFilter("articleDate", dateObj => {
+    return DateTime.fromJSDate(dateObj)
+      .setLocale("uk")
+      .toLocaleString(DateTime.DATE_MED);
+  });
+
   // Page Ordering
   config.addCollection("page", function(collections) {
     return collections.getFilteredByTag("page").sort(function(a, b) {
