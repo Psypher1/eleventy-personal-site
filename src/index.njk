@@ -20,21 +20,31 @@ order: 1
 
 </article>
 <article class="mt-5">
-<h3 class="font-headingAlt text-xl md:text-2xl font-semibold text-gray-100">A Potion You Should See</h3>
-  <p class="prose text-green-100  line-clamp-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, dicta sunt voluptatum, autem fugit minima ipsam dolorem eum ut tempore vero similique sequi quisquam at eaque totam, ullam facere ex! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem commodi nisi provident ducimus quod velit nostrum ut tempore corporis laudantium?
-</p>
+<h3 class="font-headingAlt text-xl md:text-2xl mb-4 font-semibold text-gray-100">A Potion You Should See</h3>
+ 
+ {% for item in potions %}
+  {% if item.title == "The Language Hub" %}
+    <a href="{{item.visit}}" target="_blank" rel="noopener noreferrer nofollow" class="bg-green-800 shadow-xl p-6 block rounded">
+       <img src="{{item.image}}" alt="{{item.title}}" class="block rounded">
+      <h3 class="text-xl text-center font-headingAlt mt-4 mx-auto">
+      {{item.title}}
+      </h3>
+        
+    </a>
+  {% endif %}
+ {% endfor %}
 
 </article>
 {% endPageSection %}
 
 
 {% PageSection "People I've Worked With"%}
-{# 
-{% for item in testimonials %}
-<blockquote class="p-4 italic border-l-4 bg-neutral-900 text-neutral-100 border-neutral-500 mb-5">
-  <p class="mb-2 prose prose-base  text-neutral-100">"{{item.message}}"</p>
+
+{# {% for item in testimonials %}
+<blockquote class="p-4  border-l-4 bg-neutral-900 text-gray-100 border-neutral-400 mb-8">
+  <p class="mb-2  prose prose-base text-neutral-300">"{{item.message}}"</p>
   <cite> - 
-  <a href="{{item.link}}" target="_blank" rel="noopener noreferrer">{{item.name}}</a>
+  <a href="{{item.link}}" class="text-neutral-400" target="_blank" rel="noopener noreferrer">{{item.name}}</a>
   </cite>
   </blockquote>
 {% endfor %} #}

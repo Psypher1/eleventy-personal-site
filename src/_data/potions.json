@@ -1,0 +1,18 @@
+[
+  {
+    "title": "PRÆY",
+    "description": "PRÆY is the personal site for Tapiwanashe Manhombo - a filmmaker and writer. Tapiwa's site is meant to showcase the work she has done, be a place for her writing, as well as help promote her book. It is designed to better reflect her.",
+    "image": "/assets/images/potionImages/praey.png",
+    "tags": ["Next.js", "Contentful", "TailwindCSS"],
+    "source": "https://github.com/Psypher1/",
+    "visit": "https://tapiwanashe.com/"
+  },
+  {
+    "title": "The Language Hub",
+    "description": "The Language Hub is a central place for your language learning needs. Getting you to what you need quickly and easily",
+    "image": "/assets/images/potionImages/tlh.png",
+    "tags": ["Next.js", "TailwindCSS", "Markdown"],
+    "source": "https://github.com/Psypher1/the-language-hub",
+    "visit": "https://thelanguagehub.netlify.app/"
+  }
+]
