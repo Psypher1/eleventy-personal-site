@@ -10,6 +10,7 @@ module.exports = function(config) {
 
   // Passthroughs
   config.addPassthroughCopy("src/assets/images/**/*");
+  config.addPassthroughCopy("src/assets/seo/**/*");
   config.addPassthroughCopy("src/assets/icons");
   config.addPassthroughCopy({ "./src/_fonts": "/fonts" });
 
