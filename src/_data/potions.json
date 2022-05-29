@@ -14,5 +14,13 @@
     "tags": ["Next.js", "TailwindCSS", "Markdown"],
     "source": "https://github.com/Psypher1/the-language-hub",
     "visit": "https://thelanguagehub.netlify.app/"
+  },
+  {
+    "title": "Monoqo Design",
+    "description": "The site for a branding company. This was built to client's specifications. They came with a design, I brought it to life.",
+    "tags": ["HTML", "SCSS", "JavaScript"],
+    "image": "/assets/images/potionImages/monoqo.png",
+    "source": "https://github.com/Psypher1/",
+    "visit": "https://monoqo.netlify.app/"
   }
 ]
