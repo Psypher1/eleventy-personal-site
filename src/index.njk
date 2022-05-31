@@ -10,7 +10,7 @@ order: 1
 
 {% include "partials/_social.njk"%}
 
-
+<h2 class="text-center text-3xl mt-16 font-heading tracking-wider">I solemnly swear that I am up to no good...</h2>
 
 {% PageSection "My Pensieve"%}
 <p class="prose text-green-100">To settle my mind, I move my thoughts to my pensieve. Have a look at some of them...</p>
@@ -22,8 +22,8 @@ order: 1
     {% if article.title == "Let's Learn 11ty Part 1" %}
         <a href="https://dantedecodes.hashnode.dev/{{article.slug}}"
         target="_blank"  rel="noopener noreferrer"
-        class="mb-6 text-gray-300 bg-gray-900 p-4 block rounded"
-        >
+        class="mb-6 text-gray-300 bg-gray-900 p-4 block rounded hover:bg-black transition duration-300"
+        >  
         <h3 class="text-xl md:text-2xl font-headingAlt text-gray-200">{{article.title}}</h3>
   {# <img src="{{article.coverImage}}" alt="{{article.title}}" class="object-cover"> #}
         <p class="prose text-gray-300 prose-sm md:prose-base ">{{article.brief}}</p>
