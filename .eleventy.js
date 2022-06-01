@@ -14,6 +14,8 @@ module.exports = function(config) {
   config.addPassthroughCopy("src/assets/icons");
   config.addPassthroughCopy({ "./src/_fonts": "/fonts" });
 
+  config.addPassthroughCopy({ "./src/assets/resume.pdf": "/resume.pdf" });
+
   // SEO
   config.addPassthroughCopy({ "./src/assets/robots.txt": "/robots.txt" });
 
