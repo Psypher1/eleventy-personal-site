@@ -19,21 +19,19 @@ order: 1
     <h3 class="font-headingAlt text-xl md:text-2xl mb-4  font-semibold text-gray-100">Latest Parchment</h3>
 
   {% for article in articles %}
-    {% if article.title == "Let's Learn 11ty Part 1" %}
+    {% if article.title == "Let's Learn 11ty Part 3" %}
         <a href="https://dantedecodes.hashnode.dev/{{article.slug}}"
         target="_blank"  rel="noopener noreferrer"
         class="mb-6 text-gray-300 bg-gray-900 p-4 block rounded hover:bg-black transition duration-300"
         >  
-        <h3 class="text-xl md:text-2xl font-headingAlt text-gray-200">{{article.title}}</h3>
-  {# <img src="{{article.coverImage}}" alt="{{article.title}}" class="object-cover"> #}
+        <h4 class="text-xl md:text-2xl font-headingAlt text-gray-200">{{article.title}}</h4>
+ 
         <p class="prose text-gray-300 prose-sm md:prose-base ">{{article.brief}}</p>
 
        </a>
     {% endif %}
    
   {% endfor %}
-  
-
 </article>
 
 <article class="mt-12">
@@ -41,11 +39,13 @@ order: 1
  
  {% for item in potions %}
   {% if item.title == "The Language Hub" %}
-    <a href="{{item.visit}}" target="_blank" rel="noopener noreferrer nofollow" class="bg-green-800 shadow-xl p-6 block rounded">
-       <img src="{{item.image}}" alt="{{item.title}}" width="{{item.imageWidth}}" height="{{item.imageHeight}}" class="block rounded">
-      <h3 class="text-xl text-center font-headingAlt mt-4 mx-auto">
+    <a href="{{item.visit}}" target="_blank" rel="noopener noreferrer nofollow" class="bg-gray-900 hover:bg-black shadow-xl p-6 block rounded-md text-center prose text-gray-100 prose-headings:text-gray-100">
+       {# <img src="{{item.image}}" alt="{{item.title}}" width="{{item.imageWidth}}" height="{{item.imageHeight}}" class="block rounded"> #}
+      <h4 class="text-xl md:text-2xl   font-headingAlt ">
       {{item.title}}
-      </h3>
+      </h4>
+      <p>{{item.description}}</p>
+
     </a>
   {% endif %}
  {% endfor %}
@@ -57,10 +57,10 @@ order: 1
 {% PageSection "People I've Worked With"%}
 
  {% for item in testimonials %}
-<blockquote class="p-4  border-l-4 bg-neutral-900 text-gray-100 border-neutral-400 mb-8">
-  <p class="mb-2  prose prose-base text-neutral-300">"{{item.message}}"</p>
+<blockquote class="p-4 border-l-4 bg-black text-gray-100 border-gray-400 mb-8 rounded">
+  <p class="mb-2  prose prose-base text-gray-300">"{{item.message}}"</p>
   <cite> - 
-  <a href="{{item.link}}" class="text-neutral-400" target="_blank" rel="noopener noreferrer">{{item.name}}</a>
+  <a href="{{item.link}}" class="text-gray-400" target="_blank" rel="noopener noreferrer">{{item.name}}</a>
   </cite>
   </blockquote>
 {% endfor %} 

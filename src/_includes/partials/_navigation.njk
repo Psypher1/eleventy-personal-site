@@ -1,13 +1,5 @@
- {# <nav class="p-4 flex items-center justify-center bg-black gap-2"> 
-    <a href='/'>Manor</a>
-    <a href='/potions'>Potions</a>
-    <a href='/parchment'>Parchment</a>
-    <a href='/spells'>Spells</a>
-    <a href='/owl'>Owl</a>
-  </nav> #}
-
 <header class="bg-black text-gray-100 sticky inset-0">
-<nav class=" flex items-center justify-center text-sm md:text-base max-w-2xl mx-auto divide-x divide-gray-700 ">
+<nav role="navigation" aria-label="navigation" class=" flex items-center justify-center text-sm md:text-base max-w-2xl mx-auto divide-x divide-gray-700 ">
   
 {%- for item in collections.page -%}
 <a href="{{ item.url }}" class="hover:bg-gray-900 px-5 py-3 transition duration-500 ease-in-out {% if item.url == page.url%}active{% endif %} ">{{ item.data.title }} 

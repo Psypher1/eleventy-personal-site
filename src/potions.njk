@@ -20,12 +20,12 @@ order: 2
       <p class='prose text-gray-300 line-clamp-3 '>{{potion.description}}</p>
 
       <div class="flex items-center justify-around">
-         <a href="{{potion.visit}}" target="_blank" rel="noopener noreferrer nofollow" class="flex items-center gap-1 no-underline hover:text-gray-300 transition duration-300">
+         <a href="{{potion.visit}}" target="_blank" rel="noopener noreferrer nofollow" class="flex items-center gap-1 uppercase no-underline hover:text-gray-300 transition duration-300">
             <img src="/assets/icons/warlock-eye.svg" class="h-5 w-5" alt="visit project">
-            <span>Visit</span>
+            <span >Visit</span>
             </a>
-         <a href="{{potion.source}}" target="_blank" rel="noopener noreferrer nofollow"  class="hover:text-gray-300 cale-105 transition duration-300">View source</a>
-      </div>
+         <a href="{{potion.source}}" target="_blank" rel="noopener noreferrer nofollow"  class="hover:text-gray-300 uppercase transition duration-300">View source</a>
+      </div> 
 
       <div class="flex items-center mx-auto gap-2 bg-gray-800 p-3 rounded-md">
          {% for tag in potion.tags %}
