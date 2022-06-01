@@ -3,6 +3,8 @@
     "title": "PRÆY",
     "description": "PRÆY is the personal site for Tapiwanashe Manhombo - a filmmaker and writer. Tapiwa's site is meant to showcase the work she has done, be a place for her writing, as well as help promote her book. It is designed to better reflect her.",
     "image": "/assets/images/potionImages/praey.png",
+    "imageWidth": 640,
+    "imageHeight": 300,
     "tags": ["Next.js", "Contentful", "TailwindCSS"],
     "source": "https://github.com/Psypher1/",
     "visit": "https://tapiwanashe.com/"
@@ -11,6 +13,8 @@
     "title": "The Language Hub",
     "description": "The Language Hub is a central place for your language learning needs. Getting you to what you need quickly and easily",
     "image": "/assets/images/potionImages/tlh.png",
+    "imageWidth": 640,
+    "imageHeight": 300,
     "tags": ["Next.js", "TailwindCSS", "Markdown"],
     "source": "https://github.com/Psypher1/the-language-hub",
     "visit": "https://thelanguagehub.netlify.app/"
@@ -20,6 +24,8 @@
     "description": "The site for a branding company. This was built to client's specifications. They came with a design, I brought it to life.",
     "tags": ["HTML", "SCSS", "JavaScript"],
     "image": "/assets/images/potionImages/monoqo.png",
+    "imageWidth": 640,
+    "imageHeight": 283,
     "source": "https://github.com/Psypher1/",
     "visit": "https://monoqo.netlify.app/"
   }

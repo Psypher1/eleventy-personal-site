@@ -1,9 +1,9 @@
 module.exports = [
-  {
-    name: "Kuziwa",
-    message: "Dante is goood",
-    link: "https://www.facebook.com/kuziwa.dante"
-  },
+  // {
+  //   name: "Kuziwa",
+  //   message: "Dante is goood",
+  //   link: "https://www.facebook.com/kuziwa.dante"
+  // },
   {
     name: "Tapiwanashe Manhombo",
     message:

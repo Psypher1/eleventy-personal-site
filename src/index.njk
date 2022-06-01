@@ -42,7 +42,7 @@ order: 1
  {% for item in potions %}
   {% if item.title == "The Language Hub" %}
     <a href="{{item.visit}}" target="_blank" rel="noopener noreferrer nofollow" class="bg-green-800 shadow-xl p-6 block rounded">
-       <img src="{{item.image}}" alt="{{item.title}}" class="block rounded">
+       <img src="{{item.image}}" alt="{{item.title}}" width="{{item.imageWidth}}" height="{{item.imageHeight}}" class="block rounded">
       <h3 class="text-xl text-center font-headingAlt mt-4 mx-auto">
       {{item.title}}
       </h3>
@@ -56,14 +56,14 @@ order: 1
 
 {% PageSection "People I've Worked With"%}
 
-{# {% for item in testimonials %}
+ {% for item in testimonials %}
 <blockquote class="p-4  border-l-4 bg-neutral-900 text-gray-100 border-neutral-400 mb-8">
   <p class="mb-2  prose prose-base text-neutral-300">"{{item.message}}"</p>
   <cite> - 
   <a href="{{item.link}}" class="text-neutral-400" target="_blank" rel="noopener noreferrer">{{item.name}}</a>
   </cite>
   </blockquote>
-{% endfor %} #}
+{% endfor %} 
 
 {% endPageSection%}
 
