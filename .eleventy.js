@@ -13,12 +13,12 @@ module.exports = function(config) {
   config.addPassthroughCopy("src/assets/seo/**/*");
   config.addPassthroughCopy("src/assets/icons");
   config.addPassthroughCopy({ "./src/_fonts": "/fonts" });
-
   config.addPassthroughCopy({ "./src/assets/resume.pdf": "/resume.pdf" });
 
   // SEO
   config.addPassthroughCopy({ "./src/assets/robots.txt": "/robots.txt" });
 
+  // FOR SITEMAP
   config.addShortcode("currentDate", (date = DateTime.now()) => {
     return date;
   });
@@ -39,6 +39,9 @@ module.exports = function(config) {
   // Component / Shortcodes
   config.addShortcode("PageHeading", PageHeading);
   config.addPairedNunjucksShortcode("PageSection", PageSection);
+
+  // YEAR
+  config.addShortcode("year", () => `${new Date().getFullYear()}`);
 
   // shortcode
   config.addPairedNunjucksShortcode("section", function(
