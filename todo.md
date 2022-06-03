@@ -6,3 +6,5 @@
 - [x] add component for page sections (issue with this one)
 - [x] learn to connect to external source
 - [x] get data
+- [ ] work on performance
+- [ ] minify css, html and js
