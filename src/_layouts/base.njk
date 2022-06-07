@@ -45,23 +45,15 @@
 
   </head>
   <body class='font-body antialiased bg-green-900 text-gray-100'>
+    
   {% include "partials/_navigation.njk" %}
  
-
   <main role="main"  class="mx-auto min-h-screen max-w-2xl shadow-2xl py-12 px-8 md:px-10 sm:py-12 md:pb-20">
     {{ content | safe }}
   </main>
-
   
-    
   {% include "partials/_footer.njk" %}
 
-  <script>
-    var today = new Date()
-    var year = today.getFullYear()
-    document.getElementById('year').innerHTML = year
-  </script>
-    
   </body>
 </html>
 
