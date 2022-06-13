@@ -8,13 +8,13 @@ module.exports = [
   {
     name: "Nessy Kinahan",
     message:
-      "Dante's approach to instruction is really unique. My girls grasped concepts much better than in a standard classroom setting.",
+      "Dante's approach to instruction is really unique and impressive. My girls grasped concepts much quicker with his guidance than they would have in a standard classroom setting.",
     link: ""
   },
   {
     name: "Carna",
     message:
-      "James did a wonderful job with our kids. It was great seeing them take on the lessons he taught them.",
+      "James did a wonderful job with our kids. He was able to keep them engaged and attentative. It was great seeing them take on the lessons he taught them.",
     link: ""
   },
   {
