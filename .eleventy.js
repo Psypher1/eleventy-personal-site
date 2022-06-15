@@ -1,4 +1,5 @@
 const { DateTime } = require("luxon");
+const Image = require("@11ty/eleventy-img");
 
 // Shortcode Imports
 const PageHeading = require("./src/_includes/components/PageHeading.js");
