@@ -20,6 +20,7 @@ order: 1
     <h3 class="font-headingAlt text-xl md:text-2xl mb-4  font-semibold text-gray-100">Latest Parchment</h3>
 
   {% for article in articles %}
+
     {% if article.title == "Learn 11ty Part 8" %}
         <a href="https://dantedecodes.hashnode.dev/{{article.slug}}"
         target="_blank"  rel="noopener noreferrer"
