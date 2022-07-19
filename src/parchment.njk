@@ -8,27 +8,33 @@ order: 3
 {% PageHeading heading="Parchment", subheading="My parchment is where I write down the things I am working on. It is where I figure out spells and potions." %}
 
 {% PageSection "" %}
-{% for article in articles %}
-<a href="https://dantedecodes.hashnode.dev/{{article.slug}}"
-target="_blank"  rel="noopener noreferrer"
-class="mb-6 text-gray-300 bg-gray-900 p-4 block rounded hover:bg-black transition duration-300"
->
-<h3 class="text-xl md:text-2xl font-headingAlt text-gray-200">{{article.title}}</h3>
-{# <img src="{{article.coverImage}}" alt="{{article.title}}" class="object-cover"> #}
-<p class="prose text-gray-300 prose-sm md:prose-base line-clamp-3">{{article.brief}}</p>
+    {% for article in articles %}
+        
+    <a href="/parchment/{{article.slug}}"
+        class="prose mb-6 text-gray-300 bg-gray-900 p-4 block rounded hover:bg-black transition duration-300"
+    >
+        <h3 class="text-xl md:text-2xl font-headingAlt text-gray-200">{{article.title}}</h3>
+        <p class="prose text-gray-300 prose-sm md:prose-base line-clamp-3">{{article.brief}}</p>
 
-
-</a>
+        <p class='text-gray-400'>{{article.dateAdded | pubDate}}</p>
+    </a> 
    
-{% endfor %}
-
-
-   
-
+    {% endfor %}
 
 {% endPageSection %}
 
+{# target="_blank"  rel="noopener noreferrer" #}
 
 
+{# <article class="mb-6 text-gray-300 bg-gray-900 p-4 block rounded hover:bg-black transition duration-300">
+            <h3 class="text-xl md:text-2xl font-headingAlt text-gray-200">{{article.title}}</h3>
+            <p class="prose text-gray-300 prose-sm md:prose-base line-clamp-3">{{article.brief}}</p>
+            <div class="flex items-center justify-evenly">
+
+            <p>{{article.dateAdded | pubDate}}</p>
+            <a href="/parchment/{{article.slug | slugify }}" class="">Read more</a>
+            </div>
+        </article> #}
 
 
+{# <img src="{{article.coverImage}}" alt="{{article.title}}" class="object-cover"> #}

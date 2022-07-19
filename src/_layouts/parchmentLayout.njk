@@ -1,0 +1,27 @@
+---
+layout: base
+pagination: 
+    data: articles
+    size: 1
+    alias: article
+permalink: "/parchment/{{article.slug | slugify }}/"
+templateEngineOverride: njk,md
+eleventyComputed:
+    title: "{{article.title | safe}}"
+---
+
+<article class='prose prose-headings:text-gray-50 text-gray-100'>
+
+<h1 class='text-center font-headingAlt'>
+{{article.title}}
+</h1>
+
+<div class='prose-strong:text-gray-100'>
+{{article.contentMarkdown}}
+</div> 
+
+<hr>
+
+
+Originaly publishedd on: <a class='text-sm not-prose text-gray-100' href='https://dantedecodes.hashnode.dev/{{article.slug}}' target="_blank"  rel="noopener noreferrer">Dante Decodes</a>
+</article>
