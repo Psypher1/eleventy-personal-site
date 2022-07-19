@@ -16,12 +16,15 @@ eleventyComputed:
 {{article.title}}
 </h1>
 
-<div class='prose-strong:text-gray-100'>
+<div class='prose-strong:text-gray-100 prose-code:text-gray-300 '>
 {{article.contentMarkdown}}
 </div> 
 
 <hr>
 
 
-Originaly publishedd on: <a class='text-sm not-prose text-gray-100' href='https://dantedecodes.hashnode.dev/{{article.slug}}' target="_blank"  rel="noopener noreferrer">Dante Decodes</a>
+<div class="flex items-center gap-2 text-base">
+
+<p>Originaly published on:</p>  <a class=' not-prose text-gray-100 font-bold' href='https://dantedecodes.hashnode.dev/{{article.slug}}' target="_blank"  rel="noopener noreferrer">Dante Decodes</a>
+</div>
 </article>
