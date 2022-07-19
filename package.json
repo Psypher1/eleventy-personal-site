@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@11ty/eleventy-img": "^2.0.1",
+    "date-fns": "^2.28.0",
     "dotenv": "^16.0.1",
     "graphql-request": "^4.2.0"
   }
