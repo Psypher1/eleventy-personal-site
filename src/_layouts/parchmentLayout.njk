@@ -1,7 +1,7 @@
 ---
 layout: base
 pagination: 
-    data: articles
+    data: collections.articlez
     size: 1
     alias: article
 permalink: "/parchment/{{article.slug | slugify }}/"
@@ -23,8 +23,14 @@ eleventyComputed:
 <hr>
 
 
-<div class="flex items-center gap-2 text-lg">
+{% include "partials/_paginate.njk" %}
 
-<p>Originaly published on:</p>  <a class='not-prose text-gray-100 font-bold' href='https://dantedecodes.hashnode.dev/{{article.slug}}' target="_blank"  rel="noopener noreferrer">Dante Decodes</a>
+<div class="flex items-center gap-2 text-base">
+<p>Originaly published on:</p> 
+ <a class='not-prose text-gray-100 font-bold' href='https://dantedecodes.hashnode.dev/{{article.slug}}' target="_blank"  rel="noopener noreferrer">Dante Decodes</a>
 </div>
+{# <div class="flex items-center gap-2 text-base">
+
+    
+</div> #}
 </article>

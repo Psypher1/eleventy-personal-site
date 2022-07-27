@@ -9,13 +9,41 @@ const PageSection = require("./src/_includes/components/PageSection.js");
 
 module.exports = function (config) {
   // Markdown Plugins
-  let options = {
+  /*  let options = {
     html: true,
     breaks: true,
     linkify: true,
   };
 
-  config.setLibrary("md", markdownIt(options));
+  config.setLibrary("md", markdownIt(options)); */
+
+  config.addCollection("articlez", async () => {
+    const endpoint = `https://api.hashnode.com/`;
+    const { GraphQLClient, gql } = require("graphql-request");
+
+    const client = new GraphQLClient(endpoint);
+
+    const query = gql`
+      {
+        user(username: "Psypher1") {
+          publication {
+            posts {
+              title
+              coverImage
+              brief
+              slug
+              dateAdded
+              contentMarkdown
+            }
+          }
+        }
+      }
+    `;
+
+    const articles = await client.request(query);
+
+    return articles.user.publication.posts;
+  });
 
   // config.addPassthroughCopy("src/assets/css/**/*");
   config.addPassthroughCopy("src/assets/css/index.css");
