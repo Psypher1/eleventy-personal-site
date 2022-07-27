@@ -45,6 +45,18 @@ module.exports = function (config) {
     return articles.user.publication.posts;
   });
 
+  config.addFilter("nextArticle", (articlez, page, modifier = 1) => {
+    const parts = page.outputPath.split("/");
+    parts.pop(); // get rid of `index.html`
+    const slug = parts.pop();
+    for (const [index, article] of articlez.entries()) {
+      const target = index + modifier;
+      if (article.slug === slug && target >= 0 && target < articlez.length) {
+        return articlez[target];
+      }
+    }
+  });
+
   // config.addPassthroughCopy("src/assets/css/**/*");
   config.addPassthroughCopy("src/assets/css/index.css");
 

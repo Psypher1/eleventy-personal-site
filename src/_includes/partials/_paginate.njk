@@ -1,11 +1,9 @@
-{% set previousPost = collections.articlez | getPreviousCollectionItem(page) %}
-{% set nextPost = collections.articlez | getNextCollectionItem(page) %}
+{% set previousPost = collections.articlez | nextArticle(page) %}
+{% set nextPost = collections.articlez | nextArticle(page, -1) %}
 
+<pre style="white-space: pre-wrap;">{{ previousPost | dump }}</pre>
+<pre style="white-space: pre-wrap;">{{ nextPost | dump }}</pre>
     
-    <pre>{{page | dump}}</pre>
-    <pre>{{previousPost | dump}}</pre>
-    <pre>{{nextPost | dump}}</pre>
-
 <div class="flex justify-around bg-gray-900 text-gray-100">
     <p>{% if previousPost %}Previous Blog Post: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>{% endif %}</p>
     <p>{% if nextPost %}Next Blog Post: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %}</p>
