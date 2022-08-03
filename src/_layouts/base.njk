@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
     <title>{% if title and title != 'Home' %}{{title}} | {% endif %}{{ config.siteTitle }}</title>
      <link rel="canonical" href="{{ config.url }}{{ page.url }}">
 
@@ -46,11 +47,11 @@
   <meta name="generator" content="{{ eleventy.generator }}">
 
   </head>
-  <body class='font-body antialiased bg-green-900 text-gray-100'>
+  <body class='font-body antialiased bg-gradient-to-br from-emerald-900 to-green-900 text-gray-100'>
     
   {% include "partials/_navigation.njk" %}
  
-  <main role="main"  class="mx-auto bg-green-900  min-h-screen max-w-2xl shadow-2xl py-12 px-8 md:px-10 sm:py-12 md:pb-20">
+  <main role="main"  class="mx-auto bg-green-900   min-h-screen max-w-2xl shadow-2xl py-12 px-8 md:px-10 sm:py-12 md:pb-20">
     {{ content | safe }}
   </main>
   

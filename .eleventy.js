@@ -1,21 +1,56 @@
 const { DateTime } = require("luxon");
-const Image = require("@11ty/eleventy-img");
 const { parseISO, format } = require("date-fns");
-const markdownIt = require("markdown-it");
 
 // Shortcode Imports
 const PageHeading = require("./src/_includes/components/PageHeading.js");
 const PageSection = require("./src/_includes/components/PageSection.js");
 
-module.exports = function (config) {
-  // Markdown Plugins
-  let options = {
-    html: true,
-    breaks: true,
-    linkify: true,
-  };
+// syntax
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
-  config.setLibrary("md", markdownIt(options));
+module.exports = function (config) {
+  config.addPlugin(syntaxHighlight);
+
+  // logic for article collection and filter
+  config.addCollection("articlez", async () => {
+    const endpoint = `https://api.hashnode.com/`;
+    const { GraphQLClient, gql } = require("graphql-request");
+
+    const client = new GraphQLClient(endpoint);
+
+    const query = gql`
+      {
+        user(username: "Psypher1") {
+          publication {
+            posts {
+              title
+              coverImage
+              brief
+              slug
+              dateAdded
+              contentMarkdown
+            }
+          }
+        }
+      }
+    `;
+
+    const articles = await client.request(query);
+
+    return articles.user.publication.posts;
+  });
+
+  config.addFilter("nextArticle", (articlez, page, modifier = 1) => {
+    const parts = page.outputPath.split("/");
+    parts.pop(); // get rid of `index.html`
+    const slug = parts.pop();
+    for (const [index, article] of articlez.entries()) {
+      const target = index + modifier;
+      if (article.slug === slug && target >= 0 && target < articlez.length) {
+        return articlez[target];
+      }
+    }
+  });
 
   // config.addPassthroughCopy("src/assets/css/**/*");
   config.addPassthroughCopy("src/assets/css/index.css");

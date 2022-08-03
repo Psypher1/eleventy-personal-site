@@ -8,7 +8,7 @@ order: 3
 {% PageHeading heading="Parchment", subheading="My parchment is where I write down the things I am working on. It is where I figure out spells and potions." %}
 
 {% PageSection "" %}
-    {% for article in articles %}
+    {% for article in collections.articlez %}
         
     <a href="/parchment/{{article.slug}}"
         class="prose mb-6 text-gray-300 bg-gray-900 p-4 block rounded hover:bg-black transition duration-300"

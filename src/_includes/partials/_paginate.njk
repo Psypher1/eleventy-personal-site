@@ -1,0 +1,11 @@
+{% set previousPost = collections.articlez | nextArticle(page) %}
+{% set nextPost = collections.articlez | nextArticle(page, -1) %}
+
+{# <pre style="white-space: pre-wrap;">{{ previousPost | dump }}</pre>
+<pre style="white-space: pre-wrap;">{{ nextPost | dump }}</pre> #}
+    
+<div class="not-prose flex items-center flex-col md:flex-row gap-2 justify-around text-gray-100">
+    <p class='text-sm' >{% if previousPost %}Previous: <a class='font-bold text-base' href="/parchment/{{ previousPost.slug }}">{{ previousPost.title }}</a>{% endif %}</p>
+    <p class='text-sm'>{% if nextPost %}Next: <a class='font-bold text-base' href="/parchment/{{ nextPost.slug }}">{{ nextPost.title }}</a>{% endif %}</p>
+
+</div>

@@ -21,11 +21,11 @@ order: 1
 
   {% for article in articles %}
 
-    {% if article.title == "Lessons I've Learnt While Building Sites" %}
+    {% if article.title == "Let's Learn 11ty Part 9: Data Revisited" %}
         <a href="/parchment/{{article.slug}}"
         class="prose mb-6 text-gray-300 bg-gray-900 p-4 block rounded hover:bg-black transition duration-300"
         >  
-        <h4 class="text-lg md:text-2xl font-headingAlt text-gray-200 ">{{article.title}}</h4>
+        <h4 class="text-lg md:text-2xl font-headingAlt text-gray-200">{{article.title}}</h4>
  
         <p class="prose text-gray-300 prose-sm md:prose-base line-clamp-2 mb-2">{{article.brief}}</p>
          <p class='text-gray-400'>{{article.dateAdded | pubDate}}</p>
