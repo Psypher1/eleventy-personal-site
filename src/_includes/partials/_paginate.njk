@@ -1,13 +1,11 @@
 {% set previousPost = collections.articlez | nextArticle(page) %}
 {% set nextPost = collections.articlez | nextArticle(page, -1) %}
 
-<pre style="white-space: pre-wrap;">{{ previousPost | dump }}</pre>
-<pre style="white-space: pre-wrap;">{{ nextPost | dump }}</pre>
+{# <pre style="white-space: pre-wrap;">{{ previousPost | dump }}</pre>
+<pre style="white-space: pre-wrap;">{{ nextPost | dump }}</pre> #}
     
-<div class="flex justify-around bg-gray-900 text-gray-100">
-    <p>{% if previousPost %}Previous Blog Post: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>{% endif %}</p>
-    <p>{% if nextPost %}Next Blog Post: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %}</p>
-{# <p>{% if previousPost %}<b>Previous</b>: <a class='text-gray-100' href="{{ previousPost.url }}">{{ previousPost.title }}</a>{% endif %}</p>
+<div class="not-prose flex items-center flex-col md:flex-row gap-2 justify-around text-gray-100">
+    <p class='text-sm' >{% if previousPost %}Previous: <a class='font-bold text-base' href="/parchment/{{ previousPost.slug }}">{{ previousPost.title }}</a>{% endif %}</p>
+    <p class='text-sm'>{% if nextPost %}Next: <a class='font-bold text-base' href="/parchment/{{ nextPost.slug }}">{{ nextPost.title }}</a>{% endif %}</p>
 
-<p>{% if nextPost %}<b>Next</b>: <a class='text-gray-1000' href="{{ nextPost.url }}">{{ nextPost.title }}</a>{% endif %}</p> #}
 </div>

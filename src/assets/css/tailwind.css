@@ -15,12 +15,15 @@
   font-weight: 400;
   font-display: swap;
 }
+html {
+  scroll-behavior: smooth;
+}
 
-body {
+/* body {
   background-image: url("/assets/images/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-}
+} */

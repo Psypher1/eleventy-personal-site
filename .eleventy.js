@@ -1,22 +1,17 @@
 const { DateTime } = require("luxon");
-const Image = require("@11ty/eleventy-img");
 const { parseISO, format } = require("date-fns");
-const markdownIt = require("markdown-it");
 
 // Shortcode Imports
 const PageHeading = require("./src/_includes/components/PageHeading.js");
 const PageSection = require("./src/_includes/components/PageSection.js");
 
+// syntax
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+
 module.exports = function (config) {
-  // Markdown Plugins
-  /*  let options = {
-    html: true,
-    breaks: true,
-    linkify: true,
-  };
+  config.addPlugin(syntaxHighlight);
 
-  config.setLibrary("md", markdownIt(options)); */
-
+  // logic for article collection and filter
   config.addCollection("articlez", async () => {
     const endpoint = `https://api.hashnode.com/`;
     const { GraphQLClient, gql } = require("graphql-request");

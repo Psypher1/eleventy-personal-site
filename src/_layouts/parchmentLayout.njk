@@ -10,24 +10,24 @@ eleventyComputed:
     title: "{{article.title | safe}}"
 ---
 
-<article class='prose prose-headings:text-gray-50 text-gray-100'>
+<article class='prose prose-headings:text-gray-50 text-gray-100 '>
 
 <h1 class='text-center font-headingAlt'>
 {{article.title}}
 </h1>
 
-<div class='prose-strong:text-gray-100 prose-code:text-gray-300 prose-a:text-gray-100 prose-a:font-semibold'>
+<div class='prose-strong:text-gray-100 prose-code:text-gray-300 prose-a:text-gray-100 prose-a:font-semibold prose-hr:text-green-700 '>
 {{article.contentMarkdown}}
 </div> 
 
-<hr>
+<hr class='prose-hr:text-green-400'>
 
 
 {% include "partials/_paginate.njk" %}
 
-<div class="flex items-center gap-2 text-base">
+<div class="flex items-center gap-2 text-base mt-8 italic text-green-300">
 <p>Originaly published on:</p> 
- <a class='not-prose text-gray-100 font-bold' href='https://dantedecodes.hashnode.dev/{{article.slug}}' target="_blank"  rel="noopener noreferrer">Dante Decodes</a>
+ <a class='not-prose text-green-300 font-bold' href='https://dantedecodes.hashnode.dev/{{article.slug}}' target="_blank"  rel="noopener noreferrer">Dante Decodes</a>
 </div>
 {# <div class="flex items-center gap-2 text-base">
 
