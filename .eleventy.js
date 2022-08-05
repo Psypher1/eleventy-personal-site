@@ -5,11 +5,23 @@ const { parseISO, format } = require("date-fns");
 const PageHeading = require("./src/_includes/components/PageHeading.js");
 const PageSection = require("./src/_includes/components/PageSection.js");
 
+const markdownIt = require("markdown-it");
 // syntax
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function (config) {
   config.addPlugin(syntaxHighlight);
+
+  // Markdown
+  // Add within your config module
+  const md = new markdownIt({
+    html: true,
+    linkify: true,
+  });
+
+  config.addFilter("markdown", (content) => {
+    return md.render(content);
+  });
 
   // logic for article collection and filter
   config.addCollection("articlez", async () => {

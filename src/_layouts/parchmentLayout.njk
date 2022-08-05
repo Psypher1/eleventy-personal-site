@@ -5,7 +5,7 @@ pagination:
     size: 1
     alias: article
 permalink: "/parchment/{{article.slug | slugify }}/"
-templateEngineOverride: njk,md
+templateEngineOverride: njk, md
 eleventyComputed:
     title: "{{article.title | safe}}"
 ---
@@ -17,7 +17,7 @@ eleventyComputed:
 </h1>
 
 <div class='prose-strong:text-gray-100 prose-code:text-gray-300 prose-a:text-gray-100 prose-a:font-semibold prose-hr:text-green-700 '>
-{{article.contentMarkdown}}
+{{article.contentMarkdown | markdown | safe}}
 </div> 
 
 <hr class='prose-hr:text-green-400'>
