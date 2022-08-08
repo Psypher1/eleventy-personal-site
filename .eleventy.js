@@ -10,7 +10,7 @@ const markdownIt = require("markdown-it");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function (config) {
-  config.addPlugin(syntaxHighlight);
+  // config.addPlugin(syntaxHighlight);
 
   // Markdown
   // Add within your config module
