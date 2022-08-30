@@ -5,23 +5,34 @@ const { parseISO, format } = require("date-fns");
 const PageHeading = require("./src/_includes/components/PageHeading.js");
 const PageSection = require("./src/_includes/components/PageSection.js");
 
-const markdownIt = require("markdown-it");
-// syntax
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const markdownIt = require("markdown-it");
 
 module.exports = function (config) {
-  // config.addPlugin(syntaxHighlight);
+  // SYNT
+  config.addPlugin(syntaxHighlight);
 
   // Markdown
   // Add within your config module
   const md = new markdownIt({
     html: true,
+    breaks: false,
     linkify: true,
+    typographer: true,
   });
 
   config.addFilter("markdown", (content) => {
     return md.render(content);
   });
+
+  // const markdownOptions = {
+  //   html: true,
+  //   breaks: false,
+  //   linkify: true,
+  //   typographer: true,
+  // };
+
+  // config.setLibrary("md", markdownIt(markdownOptions));
 
   // logic for article collection and filter
   config.addCollection("articlez", async () => {
@@ -88,10 +99,8 @@ module.exports = function (config) {
     return `${formattedDate}`;
   });
 
-  config.addFilter("articleDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj)
-      .setLocale("uk")
-      .toLocaleString(DateTime.DATE_MED);
+  config.addFilter("articleDate", (date) => {
+    return DateTime.fromFormat(date, "yyyy-MM-dd").toFormat("dd MM, yyyy");
   });
 
   config.addFilter("postDate", (dateObj) => {
