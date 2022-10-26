@@ -76,7 +76,8 @@ module.exports = function (config) {
   });
 
   // config.addPassthroughCopy("src/assets/css/**/*");
-  config.addPassthroughCopy("src/assets/css/index.css");
+  config.addPassthroughCopy("src/assets/css/style.css");
+  config.addPassthroughCopy("src/assets/js/app.js");
 
   // Passthroughs
   config.addPassthroughCopy("src/assets/images/**/*");
