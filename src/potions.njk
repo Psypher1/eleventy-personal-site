@@ -19,17 +19,19 @@ order: 2
       <img src="{{potion.image}}" alt="{{potion.title}}" class="rounded" width="{{potion.imageWidth}}" height="{{potion.imageHeight}}" >
       <p class='prose prose-sm md:prose-base text-gray-300 line-clamp-3 '>{{potion.description}}</p>
 
-      <div class="flex items-center justify-around">
-         <a href="{{potion.visit}}" target="_blank" rel="noopener noreferrer nofollow" class="flex items-center gap-1 uppercase no-underline hover:text-gray-300 transition duration-300">
+      <div class="flex items-center justify-around text-gray-300">
+         <a href="{{potion.visit}}" target="_blank" rel="noopener noreferrer nofollow" class="flex items-center gap-1 uppercase no-underline hover:text-white transition duration-300 bg-gray-800 py-2 px-6 rounded">
             <img src="/assets/icons/warlock-eye.svg" class="h-5 w-5" alt="visit project">
             <span >Visit</span>
             </a>
-         <a href="{{potion.source}}" target="_blank" rel="noopener noreferrer nofollow"  class="hover:text-gray-300 uppercase transition duration-300">View source</a>
+         <a href="{{potion.source}}" target="_blank" rel="noopener noreferrer nofollow" class="flex items-center gap-1 uppercase no-underline hover:text-white transition duration-300 bg-gray-800 py-2 px-6 rounded">
+            <img src="/assets/icons/github.svg" class="h-4 w-4 text-gray-300" >
+            Source</a>
       </div> 
 
-      <div class="flex items-center mx-auto gap-2 bg-gray-800 p-3 rounded-md">
+      <div class="flex items-center mx-auto gap-2 bg-gray-800 p-2 rounded-md">
          {% for tag in potion.tags %}
-            <p class="text-sm">{{tag}}</p>
+            <p class="text-xs">{{tag}}</p>
          {% endfor %}
          </div>
       
